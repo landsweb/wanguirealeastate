@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body{
+    font-family: system-ui;
+    width: 90%;
+    margin-inline: auto;
+    background: linear-gradient( to bottom right,white, green 49%, red 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    margin-top: 5rem;
+}
+.box {
+    border: 1px transparent;
+    border-radius: 6%;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+}
+.fa-instagram{
+    
+    color:  red;
+}
+.fa-whatsapp{
+    
+    color: black;
+}
+.fa-facebook{
+    color: blue;
+}
+.fa-tiktok{
+    color: black;
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background: var(--bg-color);
+}
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+.footer .social a {
+    display: inline-flex;
+    justify-content: center;
+    background: transparent;
+    font-size: 2rem;
+    margin: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 5px 1px 5px 3px black;
+    color: black;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.footer .social a:hover {
+    transform: scale(1.5) translateY(-8px);
+    box-shadow: 0 0 20px black;
+}
+.footer .copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+@media (max-width: 800px) {
+    .footer {
+        padding: 2rem 3%;
+    }
+}
